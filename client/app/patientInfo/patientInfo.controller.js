@@ -20,13 +20,12 @@
 
         function save(patient){
             patientFactory
-                .create(patient)
-                .then(function(patient){
-                    alert('patient Created!');
-                    $state.go('emergencyContact', {id: patient.id});
-                });
-             
-            
+            .create(patient)
+                .then(function(response){
+                alert('patient Created!');
+                console.log(response.id);
+               $state.go('wizard.emergencyContact' + response.id);
+                });            
         }
 
     }
