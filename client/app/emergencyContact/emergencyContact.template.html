@@ -36,9 +36,20 @@
 
         </md-content>
 
+        <md-button class="md-raised md-warn" ng-click="emergencyContactCtrl.createEmergencyContact(emergencyContactCtrl.contact)">Add Emergency Contact</md-button>
+
+        <hr>
+
+        <div>
+            <div class="well" ng-repeat="emergencyContact in emergencyContactCtrl.emergencyContacts">
+                <p>Name: {{emergencyContact.firstName}} {{emergencyContact.lastName}}</p>
+                <p>Phone: {{emergencyContact.mobilePhone}}</p>
+                <p> Relationship: {{emergencyContact.firstName}}</p>
+            </div>
+        </div>
+
     </div>
     
-    <md-button class="md-raised md-warn" ng-click="emergencyContactCtrl.createEmergencyContact(emergencyContactCtrl.contact)">Go to Symptoms</md-button>
+    <md-button class="md-raised md-warn" ng-click="emergencyContactCtrl.goToSymptom(emergencyContactCtrl.contact)">Go to Symptoms</md-button>
 
 </div>
-<pre>{{emergencyContactCtrl | json}}</pre>
