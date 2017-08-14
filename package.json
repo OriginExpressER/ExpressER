@@ -2,7 +2,8 @@
   "name": "ExpressER",
   "scripts": {
     "start": "node server.js",
-    "test": "cross-env NODE_ENV=test mocha ./server/**/*.spec.js"
+    "test": "cross-env NODE_ENV=test mocha ./server/**/*.spec.js",
+		"postinstall": "gulp build"
   },
   "dependencies": {
     "angular": "^1.6.5",
