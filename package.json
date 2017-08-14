@@ -5,6 +5,9 @@
     "test": "cross-env NODE_ENV=test mocha ./server/**/*.spec.js",
     "postinstall": "gulp build"
   },
+	"engines": {
+		"node": "8.1.2"
+	},
   "dependencies": {
     "angular": "^1.6.5",
     "body-parser": "^1.14.0",
